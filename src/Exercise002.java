@@ -9,13 +9,15 @@ import java.io.InputStreamReader;
  * Olá João da Silva, é um prazer te conhecer!
  */
 public class Exercise002 {
+
+    private static String nome;
     public static void main(String[] args) {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-        String nome;
+
+
 
         try {
             System.out.print("Qual é o seu nome? ");
-            nome = input.readLine();
+            nome = EntraDados.entradaDados();
             System.out.println("Olá " + nome + ", é um prazer te conhecer!");
 
         }catch (Exception e) {
