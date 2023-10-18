@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /*
 4) Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório
     entre eles.
@@ -9,12 +11,17 @@
 public class Exercise004 {
 
     public static void main(String[] args) {
+        int primeiroNumero, segundoNumero, somaDosNumeros;
 
-        System.out.print("Digite qlqr coisa: ");
+        System.out.print("Digite um valor: ");
+        primeiroNumero = Integer.parseInt(Objects.requireNonNull(EntraDados.entradaDados()));
 
-        String txt = EntraDados.entradaDados();
-        System.out.println(txt + " " + txt.length());
+        System.out.print("Digite mais um valor: ");
+        segundoNumero = Integer.parseInt(Objects.requireNonNull(EntraDados.entradaDados()));
+
+        somaDosNumeros = primeiroNumero + segundoNumero;
+
+        System.out.println(primeiroNumero + " + " + segundoNumero + " = " + somaDosNumeros);
 
     }
-
 }
